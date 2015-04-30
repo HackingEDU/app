@@ -16,6 +16,7 @@ Keep in mind whenever a npm package is added, we'll have to re-run `npm install`
 ## Running Locally
 Navigate to the app's directory and run:
 ```bash
+mongod
 npm start
 ```
 jsx files in `public/js/src` should be set up to build automatically to `public/js/build` thanks to gulp
@@ -23,6 +24,7 @@ jsx files in `public/js/src` should be set up to build automatically to `public/
 ## Prerequisites
 - [node](http://nodejs.org/)
 - [npm](https://www.npmjs.com/) (usually included with node)
+- [mongo](https://www.mongodb.org/)
 
 ## Server Stuff
 - Ssh into my server
@@ -33,5 +35,5 @@ and ask me for the password
 
 - Changes should update automatically. Should the app stop running on the server, navigate to `/home/james/app` and run:
 ```bash
-forever start -c "npm start" .
+forever start --spinSleepTime 10000 -c "npm start" .
 ```
