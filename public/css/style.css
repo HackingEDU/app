@@ -1,0 +1,10 @@
+@import url('ProximaNova.css');
+
+body {
+  padding: 50px;
+  font: 14px "Proxima Nova Thin", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

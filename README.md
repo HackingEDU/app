@@ -18,6 +18,7 @@ Navigate to the app's directory and run:
 ```bash
 npm start
 ```
+jsx files in `public/js/src` should be set up to build automatically to `public/js/build` thanks to gulp
 
 ## Prerequisites
 - [node](http://nodejs.org/)
@@ -30,7 +31,7 @@ ssh james@107.170.247.179
 ```
 and ask me for the password
 
-- Changes should update automatically. Should the app stop running, navigate to `/home/james/app` and run:
+- Changes should update automatically. Should the app stop running on the server, navigate to `/home/james/app` and run:
 ```bash
 forever start -c "npm start" .
 ```
