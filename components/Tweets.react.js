@@ -15,7 +15,10 @@ module.exports = Tweets = React.createClass({
 
     // Return ul filled with our mapped tweets
     return (
-      <ul className="tweets">{content}</ul>
+      <div id="tweets">
+        <h1>HackingEDU Twitter Feed Demo</h1>
+        <ul className="tweets" id="tweets">{content}</ul>
+      </div>
     )
 
   }

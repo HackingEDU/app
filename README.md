@@ -35,9 +35,8 @@ After running `npm install`, `sudo service mongod start`,  and making a sandwich
 git remote add prod james@107.170.247.179:app
 ```
 Now you can just `git push prod master` on your local repo to deploy without ssh-ing in. Thank git hooks for this.
- - Option 2: Ssh into my server
+ - Option 2: If the changes don't propogate on the live server
 ```bash
 ssh james@107.170.247.179
 ```
-and ask me for the password. The repo is located at /home/james/app. Just `git pull` to update it.
-
+and ask me for the password. The repo is located at /home/james/app. Just `git pull` to update it. You may need to restart the app with `pm2 restart server.js`.
