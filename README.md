@@ -30,8 +30,14 @@ After running `npm install`, `sudo service mongod start`,  and making a sandwich
  - `pm2 start server.js` - This command runs it as a background process. (requires pm2)
 
 ## Server Stuff
-- Ssh into my server
+ - Option 1: For easy deployment, run this in your local repo and enter the server password that you received from me:
+```bash
+git remote add prod james@107.170.247.179:app
+```
+Now you can just `git push prod master` on your local repo to deploy without ssh-ing in. Thank git hooks for this.
+ - Option 2: Ssh into my server
 ```bash
 ssh james@107.170.247.179
 ```
-and ask me for the password
+and ask me for the password. The repo is located at /home/james/app. Just `git pull` to update it.
+
