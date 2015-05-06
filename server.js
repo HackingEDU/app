@@ -7,7 +7,9 @@ var express = require('express'),
   routes = require('./routes'),
   config = require('./config'),
   streamHandler = require('./utils/streamHandler'),
-  debug = require('debug');
+  debug = require('debug'),
+  sassMiddleware = require('node-sass-middleware'),
+  path = require('path');
 
 // Create an express instance and set a port variable
 var app = express();
@@ -33,7 +35,16 @@ app.get('/', routes.index);
 app.get('/page/:page/:skip', routes.page);
 
 // Set /public as our static content dir
-app.use("/", express.static(__dirname + "/public/"));
+app.use(
+  sassMiddleware({
+    src: path.join(__dirname, 'public/sass'),
+    dest: path.join(__dirname, 'public/css'),
+    debug: true,
+    outputStyle: 'compressed',
+    prefix:  '/css',
+  })
+);
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Fire this bitch up (start our server)
 var server = http.createServer(app).listen(port, function() {
