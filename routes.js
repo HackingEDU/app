@@ -1,6 +1,6 @@
 var JSX = require('node-jsx').install(),
   React = require('react'),
-  HackingEduApp = React.createFactory(require('./components/HackingEduApp.react')),
+  HackingEduApp = require('./components/HackingEduApp.react'),
   Tweet = require('./models/Tweet');
 
 module.exports = {
@@ -11,9 +11,7 @@ module.exports = {
 
       // Render React to a string, passing in our fetched tweets
       var markup = React.renderToString(
-        HackingEduApp({
-          tweets: tweets
-        })
+        React.createElement(HackingEduApp, { tweets: tweets })
       );
 
       // Render our 'home' template

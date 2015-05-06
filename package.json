@@ -6,7 +6,7 @@
     "watch": "watchify app.js -o public/js/bundle.js -v",
     "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
-    "start": "npm install"
+    "start": "npm install && nodemon server"
   },
   "dependencies": {
     "debug": "^2.1.3",
