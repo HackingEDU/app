@@ -111,7 +111,7 @@ module.exports = HackingEduApp = React.createClass({
     // Get scroll pos & window data
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     var s = (document.body.scrollTop || document.documentElement.scrollTop || 0);
-    var scrolled = (h + s) > document.body.offsetHeight;
+    var scrolled = (h + s) >= document.body.offsetHeight;
 
     // If scrolled enough, not currently paging and not complete...
     if(scrolled && !this.state.paging && !this.state.done) {
