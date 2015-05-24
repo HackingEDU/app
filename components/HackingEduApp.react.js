@@ -1,5 +1,6 @@
 var React = require('react');
 var Header = require('./Header.react.js');
+var TrainingDay = require('./PhotoGallery.react.js');
 var Tweets = require('./Tweets.react.js');
 var Loader = require('./Loader.react.js');
 var NotificationBar = require('./NotificationBar.react.js');
@@ -174,6 +175,7 @@ module.exports = HackingEduApp = React.createClass({
     return (
       <div className="hackingedu-app">
         <Header />
+        <PhotoGallery photos={data}/>
         <Tweets tweets={this.state.tweets} />
         <Loader paging={this.state.paging} />
         <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets} />
@@ -184,3 +186,20 @@ module.exports = HackingEduApp = React.createClass({
   }
 
 });
+
+// Photo objects collection.
+// Ideally this would be served from Parse.
+var data = [
+  {
+    url: 'http://www.startupbootcamp.org/assets/images/events/FinTech/hong-kong.jpg',
+    caption: 'Hong Kong!'
+  },
+  {
+    url: 'http://images6.fanpop.com/image/photos/35200000/Agnes-Does-this-count-as-annoying-agnes-despicable-me-35279286-400-280.jpg',
+    caption: 'Me!'
+  },
+  {
+    url: 'http://assets-s3.usmagazine.com/uploads/assets/articles/85273-reese-witherspoon-lounges-in-inflatable-pool-donut-bathing-suit-photo/promo/1428157406_reese-witherspoon-pool_3.jpg',
+    caption: 'Look at this pool!'
+  }
+];

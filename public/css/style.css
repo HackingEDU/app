@@ -1,1 +1,48 @@
 @font-face{font-family:'Proxima Nova Bold';src:url('../fonts/Proxima-Nova-Bold.eot');src:url('../fonts/Proxima-Nova-Bold.eot?#iefix') format('embedded-opentype'),url('../fonts/Proxima-Nova-Bold.woff') format('woff'),url('../fonts/Proxima-Nova-Bold.ttf') format('truetype'),url('../fonts/Proxima-Nova-Bold.svg#webfont') format('svg');}@font-face{font-family:'Proxima Nova Semibold';src:url('../fonts/Proxima-Nova-Semibold.eot');src:url('../fonts/Proxima-Nova-Semibold.eot?#iefix') format('embedded-opentype'),url('../fonts/Proxima-Nova-Semibold.woff') format('woff'),url('../fonts/Proxima-Nova-Semibold.ttf') format('truetype'),url('../fonts/Proxima-Nova-Semibold.svg#webfont') format('svg');}@font-face{font-family:'Proxima Nova';src:url('../fonts/Proxima-Nova-Regular.eot');src:url('../fonts/Proxima-Nova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/Proxima-Nova-Regular.woff') format('woff'),url('../fonts/Proxima-Nova-Regular.ttf') format('truetype'),url('../fonts/Proxima-Nova-Regular.svg#webfont') format('svg');}@font-face{font-family:'Proxima Nova Thin';src:url('../fonts/Proxima-Nova-Thin.eot');src:url('../fonts/Proxima-Nova-Thin.eot?#iefix') format('embedded-opentype'),url('../fonts/Proxima-Nova-Thin.woff') format('woff'),url('../fonts/Proxima-Nova-Thin.ttf') format('truetype'),url('../fonts/Proxima-Nova-Thin.svg#webfont') format('svg');}*{box-sizing:border-box}body{font-family:'Proxima Nova','Helvetica Neue',Helvetica,Arial,sans-serif;background:#2c3e50}h1{font-family:'Proxima Nova','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:40px;text-align:center;color:white}header{background-image:url(../img/prism-background.jpg);background-size:cover;background-repeat:none;background-position:center center;box-sizing:border-box;color:#fff;display:flex;align-items:center;justify-content:center;padding:3rem 16.66667%;width:100%;height:100vh}header::before{background-color:rgba(0,0,0,0.25);content:"";position:absolute;top:0;left:0;right:0;bottom:0}header::after{background-image:linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%),linear-gradient(to left, rgba(62, 96, 111, 0.75) 0%, rgba(25, 52, 65, 0.75) 100%);content:"";opacity:0;position:absolute;top:0;left:0;right:0;bottom:0;transition:all .25s ease-in-out}header:hover::after{opacity:1}header *{position:relative;z-index:3}header a{color:white;text-decoration:none;margin:1em}header img{vertical-align:middle;float:center;margin-left:25%;max-width:50%}@media (max-width: 768px){header img{margin-left:12.5%;max-width:75%;}}@media (max-width: 480px){header img{margin-left:0px;max-width:100%;}}header .tagline{display:block;font-size:1.2em;height:1.2em;text-transform:uppercase;text-align:center;padding:2em 0 8em}header i{text-align:center;display:inline-block;vertical-align:middle;transform:translateZ(0);box-shadow:0 0 1px transparent;backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;transition-duration:0.3s;transition-property:transform}header i:hover,header i:focus,header i:active{transform:scale(1.2)}header .social-links{display:block;position:relative;text-align:center;z-index:1;font-size:2em}header .ion-social-facebook:hover{color:#3b5998}header .ion-social-twitter:hover{color:#55acee}header .ion-social-instagram:hover{color:#3f729b}header .ion-android-mail:hover{color:#7b8994}header .ion-chevron-down{font-size:2.5em}header .ion-chevron-down:hover{color:#007ee5}header #skip{border:none;display:block;position:absolute;bottom:1.5rem;left:0;right:0;height:1.5rem}header #skip i{display:block;margin:0 auto;width:3rem;height:1.5rem}header #skip i path{fill:rgba(255,255,255,0.75)}.loader{text-align:center}.loader img{max-height:0;margin:0;-webkit-transition:1s all ease;-moz-transition:1s all ease;-ms-transition:1s all ease;-o-transition:1s all ease;transition:1s all ease}.loader.active img{max-height:50px;margin:10px auto 20px}.notification-bar{font-size:13px;font-weight:bold;position:fixed;top:-60px;width:100%;-webkit-transition:300ms top ease;-moz-transition:300ms top ease;-ms-transition:300ms top ease;-o-transition:300ms top ease;transition:300ms top ease;text-align:center;color:white;background:rgba(0,126,229,0.9);z-index:9999}.notification-bar.active{top:0}.notification-bar a{color:white}.tweets{max-width:600px;margin:0 auto;padding:0 20px}.tweet{position:relative;display:block;overflow:hidden;max-height:0px;margin:0;list-style-type:none;color:#2c3e50;border-radius:3px;background:white;box-shadow:0 3px 0 #eee}.tweet.active{max-height:125px;margin:20px 0;-webkit-transition:1s all ease;-moz-transition:1s all ease;-ms-transition:1s all ease;-o-transition:1s all ease;transition:1s all ease}.tweet .avatar{position:relative;display:inline-block;float:left;width:48px;margin:10px;border:2px solid #ccc;border-radius:48px}.tweet blockquote{font-size:14px;display:inline-block;float:right;width:calc(100% - 72px);margin:0;padding:10px}.tweet blockquote cite{font-weight:bold;font-style:normal}.tweet blockquote cite a{display:inline-block;margin-right:5px;text-decoration:none;color:#1abc9c}.tweet blockquote cite a:hover{text-decoration:underline}.tweet blockquote .screen-name{font-size:13px;font-weight:normal;color:#ccc}.tweet blockquote .content{display:block;clear:left;margin-top:5px}.tweet:before,.tweet:after{display:table;content:' '}.tweet:after{clear:both}
+.traning-day {
+background: url(https://scontent.fsjc1-2.fna.fbcdn.net/hphotos-xat1/t31.0-8/11257830_1097575076923204_7719503096071997937_o.jpg) no-repeat center center;
+background-size: cover;
+width: auto;
+height: 100vh;
+position: relative;
+
+}
+
+.photo-gallery {
+  text-align: center;
+  margin: 2em 0;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+
+}
+
+.photo {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #232323;
+  max-width: 200px;
+  display: inline-block;
+  position: relative;
+
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+}
+
+.stamp {
+  display: block;
+  align-items: center;
+  position: relative;
+  margin-top: -55%;
+  text-align: center;
+  width: 200px;
+  color: #fff;
+}
+
+span {
+  line-height: 2.4;
+}

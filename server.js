@@ -23,7 +23,7 @@ app.set('view engine', 'handlebars');
 app.disable('etag');
 
 // Connect to our mongo database
-mongoose.connect('mongodb://localhost:27017/tweets');
+mongoose.connect('mongodb://localhost/tweets');
 
 // Create a new ntwitter instance
 var twit = new twitter(config.twitter);
