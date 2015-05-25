@@ -1,9 +1,9 @@
 var React = require('react');
-var Header = require('./Header.react.js');
-var Tweets = require('./Tweets.react.js');
-var Loader = require('./Loader.react.js');
-var NotificationBar = require('./NotificationBar.react.js');
-var Analytics = require('./Analytics.react.js');
+var Website = require('./Header.react.js');
+// var Tweets = require('./Tweets.react.js');
+// var Loader = require('./Loader.react.js');
+// var NotificationBar = require('./NotificationBar.react.js');
+// var Analytics = require('./Analytics.react.js');
 
 // Export the HackingEduApp component
 module.exports = HackingEduApp = React.createClass({
@@ -172,12 +172,8 @@ module.exports = HackingEduApp = React.createClass({
   render: function(){
 
     return (
-      <div className="hackingedu-app">
-        <Header />
-        <Tweets tweets={this.state.tweets} />
-        <Loader paging={this.state.paging} />
-        <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets} />
-        <Analytics />
+      <div className="hackingedu-website">
+        <Website />
       </div>
     )
 
