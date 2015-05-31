@@ -208,19 +208,32 @@ p.eventDetails{
     height: 300px;
     float: left;
     background-size: cover;
+    cursor: pointer;
     // background: url('../img/tday1Col.jpg');
   }
   .speakers{
     background: url('../img/tday1Col.jpg');
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  .speakers:hover{
+    background-size: auto 130%;
   }
   .swag{
     background: url('../img/tday2Col.jpg');
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  .swag:hover{
+    background-size: auto 130%;
   }
   .workshops{
     background: url('../img/tday3Col.jpg');
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  .workshops:hover{
+    background-size: auto 130%;
   }
   .highlightDetail{
     width: 100%;
@@ -271,6 +284,7 @@ p.eventDetails{
         right: 16px;
         color: #eee;
         font-size: 20px;
+        cursor: pointer;
     }
   }
 }
