@@ -1,5 +1,4 @@
 var React = require('react');
-
 module.exports = Header = React.createClass({
   render: function(){
     return (
@@ -124,9 +123,85 @@ module.exports = Header = React.createClass({
             		</div>
             	</div>
             </div>
+            <div className="tdaySection fluid-container" id="tday">
+                  <h2>TRaining Day</h2>
+                  <div className="highlightReel">
+                        <div className="highlightContent">
+                              <div className="highlight speakers">
+                                    <h2>Speakers</h2>
+                              </div>
+                              <div className="highlight swag">
+                                    <h2>Swag</h2>
+                              </div>
+                              <div className="highlight workshops">
+                                    <h2>Workshops</h2>
+                              </div>
+                              <div className="clear"></div>
+                              <div className="highlightDetail speakers">
+                                    <div className="col3">
+                                          <h2>Speakers</h2>
+                                    </div>
+                                    <div className="col3">
+                                          <img src="public/img/tday1.jpg" />
+                                    </div>
+                                    <div className="col6">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div className="clear"></div>
+                                    <div className="cross">X</div>
+                              </div>
+                              <div className="highlightDetail swag">
+                                    <div className="col3">
+                                          <h2>Speakers</h2>
+                                    </div>
+                                    <div className="col3">
+                                          <img src="public/img/tday2.jpg" />
+                                    </div>
+                                    <div className="col6">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div className="clear"></div>
+                                    <div className="cross">X</div>
+                              </div>
+                              <div className="highlightDetail workshops">
+                                    <div className="col3">
+                                          <h2>Speakers</h2>
+                                    </div>
+                                    <div className="col3">
+                                          <img src="public/img/tday3.jpg" />
+                                    </div>
+                                    <div className="col6">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div className="clear"></div>
+                                    <div className="cross">X</div>
+                              </div>
+                        </div>
+                  </div>
+
+                  <p className="marginTop40 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
       </div>
-
-
     )
   }
 });

@@ -184,3 +184,93 @@ p.eventDetails{
 .clear{
   clear: both;
 }
+
+.tdaySection{
+  background: url('../img/tdayBack.jpg');
+  background-size: cover;
+}
+.highlightReel{
+  width: 90%;
+  max-width: 1080px;
+  height: 300px;
+  margin:auto;
+  overflow: hidden;
+
+  h2{
+    color: #fff;
+    font-weight: 700;
+    margin-top: 50%;
+    position: relative;
+    top: -50px;
+  }
+  .highlight{
+    width: 33.33%;
+    height: 300px;
+    float: left;
+    background-size: cover;
+    // background: url('../img/tday1Col.jpg');
+  }
+  .speakers{
+    background: url('../img/tday1Col.jpg');
+    background-size: cover;
+  }
+  .swag{
+    background: url('../img/tday2Col.jpg');
+    background-size: cover;
+  }
+  .workshops{
+    background: url('../img/tday3Col.jpg');
+    background-size: cover;
+  }
+  .highlightDetail{
+    width: 100%;
+    height: 300px;
+    clear: both;
+    position: relative;
+    background-size: cover;
+  }
+  .highlightContent{
+    position: relative;
+    top: 0px;
+    // top: -300px;
+
+    .col3{
+      width: 25%;
+      height: 300px;
+      float: left;
+
+      h2{
+        margin-top: 50%;
+        position: relative;
+        top: -21px;
+      }
+
+      img{
+        width: 100%;
+        position: relative;
+        margin-top: 50%;
+        top: -80px;
+      }
+    }
+    .col6{
+     width: 50%;
+     height: 300px;
+     float: left; 
+
+     p{
+      padding: 40px;
+      // text-align: center;
+      margin-top: 40px;
+      color: rgba(255,255,255,0.5);
+     }
+    }
+
+    .cross{
+      position: absolute;
+        top: 6px;
+        right: 16px;
+        color: #eee;
+        font-size: 20px;
+    }
+  }
+}
