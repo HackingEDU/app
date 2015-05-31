@@ -1,5 +1,6 @@
 // Require our dependencies
 var express = require('express'),
+  JSX = require('node-jsx').install(),
   exphbs = require('express-handlebars'),
   http = require('http'),
   mongoose = require('mongoose'),
