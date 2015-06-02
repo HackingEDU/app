@@ -288,3 +288,63 @@ p.eventDetails{
     }
   }
 }
+
+.sponsors{
+  .sponsorName{
+    background:url('http://static.planetminecraft.com/files/resource_media/screenshot/1327/1328800264_minecraft-logo_5843730_lrg.jpg');
+  }
+  figure{
+    margin: auto;
+    height: 300px;
+    background-size: contain !important;
+    display: inline-block;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .tier1 figure{
+    width: 49.5%;
+    height: 130px;
+  }
+
+  .tier2 figure{
+    width: 33%;
+    height: 120px;
+  }
+
+  .tier3 figure{
+    width: 24.5%;
+    height: 100px;
+  }
+
+  .tier4 figure{
+    width: 16.3%;
+    height: 100px;
+  }
+
+}
+
+.footer{
+  background:#111;
+  color: #eee;
+
+  a.sexy{
+    border: 1px solid #eee;
+    padding: 20px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+  .social{
+    margin-top: 70px;
+
+    i.fa{
+      box-sizing:content-box;
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+}

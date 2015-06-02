@@ -5,7 +5,7 @@ module.exports = Header = React.createClass({
       <div>
             <div className="splash">
             	<div className="nav text-right">
-            		<img src="public/img/hacklogo.png" className="logo"></img>
+            		<img src="img/hacklogo.png" className="logo"></img>
             		<a href="#home">Home</a>
             		<a href="#why">Why</a>
             		<a href="#event">Event</a>
@@ -201,6 +201,49 @@ module.exports = Header = React.createClass({
                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+
+            <div className="fluid-container sponsors" id="sponsors">
+                  <div className="container">
+                        <h2>Sponsors</h2>
+                        <div className="tier1">
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                        </div>
+                        <div className="tier2">
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                        </div>
+                        <div className="tier3">
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                        </div>
+                        <div className="tier4">
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                              <figure className="sponsorName"></figure>
+                        </div>
+                  </div>
+            </div>
+
+            <div className="footer fluid-container text-center">
+                  <h2>Are you ready to <b>change education</b>?</h2>
+                  <a className="sexy" href="#apply">Apply Now!</a>
+                  <div className="social">
+                        <i className="fa fa-facebook"></i>
+                        <i className="fa fa-twitter"></i>
+                        <i className="fa fa-instagram"></i>
+                        <i className="fa fa-medium"></i>
+                  </div>
+            </div>
+
       </div>
     )
   }
