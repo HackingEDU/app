@@ -1,5 +1,6 @@
 var React = require('react');
-var Header = require('./Header.react.js');
+//var Header = require('./Header.react.js');
+var Main = require('./Main.react.js');
 var Tweets = require('./Tweets.react.js');
 var Loader = require('./Loader.react.js');
 var NotificationBar = require('./NotificationBar.react.js');
@@ -172,15 +173,14 @@ module.exports = HackingEduApp = React.createClass({
   render: function(){
     return (
       <div className="hackingedu-app">
-        <Header />
+        <Main/>
         {
           this.state.count > 0 ? 
-          <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets} /> :
+          <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets}/> :
           null
         }
-        <Tweets tweets={this.state.tweets} />
-        <Loader paging={this.state.paging} />
-        <Analytics />
+        <Loader paging={this.state.paging}/>
+        <Analytics/>
       </div>
     )
   }
