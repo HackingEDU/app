@@ -1,7 +1,6 @@
 // Require our dependencies
 var express = require('express'),
   JSX = require('node-jsx').install(),
-  exphbs = require('express-handlebars'),
   http = require('http'),
   mongoose = require('mongoose'),
   twitter = require('twitter'),
@@ -16,10 +15,6 @@ var express = require('express'),
 var app = express();
 var port = process.env.PORT || 8080;
 
-// Set handlebars as the templating engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-
 // Disable etag headers on responses
 app.disable('etag');
 
@@ -28,12 +23,6 @@ mongoose.connect('mongodb://localhost:27017/tweets');
 
 // Create a new ntwitter instance
 var twit = new twitter(config.twitter);
-
-// Index Route
-app.get('/', routes.index);
-
-// Page Route
-app.get('/page/:page/:skip', routes.page);
 
 // Set /public as our static content dir
 app.use(
@@ -45,7 +34,14 @@ app.use(
     prefix:  '/css',
   })
 );
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', express.static(path.join(__dirname, 'public')));
+
+// Index Route
+app.use('/', routes.home);
+
+// Page Route
+app.get('/page/:page/:skip', routes.page);
 
 // Fire this bitch up (start our server)
 var server = http.createServer(app).listen(port, function() {
@@ -54,6 +50,19 @@ var server = http.createServer(app).listen(port, function() {
 
 // Initialize socket.io
 var io = require('socket.io').listen(server);
+
+io.on('connection', function(socket) {
+  socket.on('get_tweets', function(data) {
+    twit.get('search/tweets', {q: 'hackingedu OR hackingedusf'}, function(error, tweets, response){
+      //add error handling later
+      var statuses = tweets.statuses;
+      if (statuses.length > data.amount) {
+        statuses = statuses.slice(0, data.amount);
+      }
+      socket.emit('tweet_search', statuses);
+    });
+  });
+});
 
 // Set a stream listener for tweets matching tracking keywords
 twit.stream('statuses/filter',{ track: 'hackingedu, hackingedusf'}, function(stream){

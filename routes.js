@@ -1,20 +1,8 @@
-var React = require('react'),
-  HackingEduApp = require('./components/HackingEduApp.react'),
-  Tweet = require('./models/Tweet');
+var path = require('path');
 
 module.exports = {
-
-  index: function(req, res) {
-    // Call static model method to get tweets in the db
-    Tweet.getTweets(0,0, function(tweets, pages) {
-      // Render React to a string, passing in our fetched tweets
-      var markup = React.renderToString(<HackingEduApp tweets={tweets}/>);
-
-      // Render our 'home' template
-      res.render('home', {
-        markup: markup // Pass rendered react markup
-      });
-    });
+  home: function(req, res) {
+    res.sendFile(path.join(__dirname, 'public/home.html'));
   },
 
   page: function(req, res) {

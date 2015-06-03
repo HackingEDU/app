@@ -1,6 +1,6 @@
 var React = require('react');
-//var Header = require('./Header.react.js');
 var Main = require('./Main.react.js');
+var Speakers = require('./Speakers.react.js');
 var Tweets = require('./Tweets.react.js');
 var Loader = require('./Loader.react.js');
 var NotificationBar = require('./NotificationBar.react.js');
@@ -8,6 +8,9 @@ var Analytics = require('./Analytics.react.js');
 
 // Export the HackingEduApp component
 module.exports = HackingEduApp = React.createClass({
+  getLastTweets: function(amount) {
+    this.props.socket.emit('get_tweets', {amount: amount});
+  },
 
   // Method to add a tweet to our timeline
   addTweet: function(tweet){
@@ -133,7 +136,7 @@ module.exports = HackingEduApp = React.createClass({
 
     // Set initial application state using props
     return {
-      tweets: props.tweets,
+      tweets: [],
       count: 0,
       page: 0,
       paging: false,
@@ -143,30 +146,22 @@ module.exports = HackingEduApp = React.createClass({
 
   },
 
-  componentWillReceiveProps: function(newProps, oldProps){
-    this.setState(this.getInitialState(newProps));
-  },
-
   // Called directly after component rendering, only on client
   componentDidMount: function(){
-
-    // Preserve self reference
     var self = this;
-
-    // Initialize socket.io
-    var socket = io.connect();
-
-    // On tweet event emission...
-    socket.on('tweet', function (data) {
-
-        // Add a tweet to our queue
+    this.props.socket.on('tweet', function (data) {
         self.addTweet(data);
-
     });
+
+    this.props.socket.on('tweet_search', function(data) {
+      self.setState({tweets: data});
+    });
+
+    //have at least 10 tweets to display initially
+    this.getLastTweets(10);
 
     // Attach scroll event to the window for infinity paging
     window.addEventListener('scroll', this.checkWindowScroll);
-
   },
 
   // Render the component
@@ -176,9 +171,10 @@ module.exports = HackingEduApp = React.createClass({
         <Main/>
         {
           this.state.count > 0 ? 
-          <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets}/> :
+          <NotificationBar count={this.state.count} onClick={this.showNewTweets}/> :
           null
         }
+        <Tweets className="marginTop40" tweets={this.state.tweets}/>
         <Loader paging={this.state.paging}/>
         <Analytics/>
       </div>

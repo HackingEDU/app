@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "watch": "watchify app.js -o public/js/bundle.js -v",
-    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
-    "build": "npm run browserify ",
-    "start": "npm install && nodemon server"
+    "build": "npm run",
+    "start": "npm install && browserify app.js -o public/js/bundle.js | uglifyjs > public/js/bundle.js && nodemon server"
   },
   "dependencies": {
     "debug": "^2.1.3",
