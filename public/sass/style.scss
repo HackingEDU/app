@@ -292,6 +292,72 @@ p.eventDetails{
   .sponsorName{
     background:url('http://static.planetminecraft.com/files/resource_media/screenshot/1327/1328800264_minecraft-logo_5843730_lrg.jpg');
   }
+  .chegg{
+    background: url('../img/sponsors/chegg.png');
+  }
+  .PayPal{
+    background: url('../img/sponsors/paypal.jpg');
+  }
+  .ibm{
+    background: url('../img/sponsors/ibm.jpg');
+  }
+  .auto{
+    background: url('../img/sponsors/automattic.jpg');
+  }
+  .pebble{
+    background: url('../img/sponsors/pebble.png');
+  }
+  .leapmotion{
+    background: url('../img/sponsors/leapmotion.png');
+  }
+  .makeschool{
+    background: url('../img/sponsors/makeschool.png');
+  }
+  .twilio{
+    background: url('../img/sponsors/twilio.png');
+  }
+  .twist{
+    background: url('../img/sponsors/twist.png');
+  }
+  .draper{
+    background: url('../img/sponsors/draper.png');
+  }
+  .bootstrap{
+    background: url('../img/sponsors/bootstrap.png');
+  }
+  .lyft{
+    background: url('../img/sponsors/lyft.png');
+  }
+  .namecheap{
+    background: url('../img/sponsors/namecheap.png');
+  }
+  .socket{
+    background: url('../img/sponsors/socket.png');
+  }
+  .edsurge{
+    background: url('../img/sponsors/edsurge.jpg');
+  }
+  .google{
+    background: url('../img/sponsors/google.png');
+  }
+  .firebase{
+    background: url('../img/sponsors/firebase.png');
+  }
+  .gun{
+    background: url('../img/sponsors/gun.png');
+  }
+  .thalmiclabs{
+    background: url('../img/sponsors/thalmiclabs.png');
+  }
+  .pearlhacks{
+    background: url('../img/sponsors/pearlhacks.png');
+  }
+  .nwhacks{
+    background: url('../img/sponsors/nwhacks.jpg');
+  }
+  .lahacks{
+    background: url('../img/sponsors/lahacks.jpeg');
+  }
   figure{
     margin: auto;
     height: 300px;
@@ -302,8 +368,8 @@ p.eventDetails{
   }
 
   .tier1 figure{
-    width: 49.5%;
-    height: 130px;
+    width: 99.5%;
+    height: 80px;
   }
 
   .tier2 figure{
@@ -314,11 +380,15 @@ p.eventDetails{
   .tier3 figure{
     width: 24.5%;
     height: 100px;
+    height: 45px;
+    margin-bottom: 32px;
   }
 
   .tier4 figure{
     width: 16.3%;
-    height: 100px;
+    height: 36px;
+      margin-bottom: 16px;
+      margin-top: 16px;
   }
 
 }
