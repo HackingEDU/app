@@ -37,16 +37,24 @@ a{
   img.logo{
     width: 100px;
     float: left;
+    margin: 1em 1em;
   }
-  .nav{
-    padding: 20px;
+  .nav {
+    position: fixed;
+    top: 0px;
+    background-color: #111;
+    width: 100vw;
+    min-height: 10vh;
+    max-height: 100px;
+    z-index: 2;
 
     a{
+      color: white;
       text-transform: uppercase;
-      margin-left: 20px;
       position: relative;
       top:10px;
-      padding: 5px 10px;
+      padding: 1em 1em;
+      margin: 1em 1em;
       border-bottom: 1px solid rgba(255,255,255,0);
     }
     a:hover{
@@ -59,7 +67,6 @@ a{
     font-weight: 100;
     margin: auto;
     display: table;
-    margin-top: 150px;
     line-height: 1;
     b{
       font-weight: 700;
@@ -416,4 +423,8 @@ p.eventDetails{
       font-size: 16px;
     }
   }
+}
+
+.logo_main {
+  width: 50vw;
 }
