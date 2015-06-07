@@ -115,6 +115,12 @@ p{
   margin: auto;
 }
 
+.col4 {
+  width: 21%;
+  display: inline-block;
+  margin: 1em 1.5em;
+}
+
 .row{
   width: 100%;
 }
@@ -127,8 +133,8 @@ h2{
 .col-4{
   padding: 0;
   margin: 0;
-  display: inline-block;
-  width: 24%;
+  display: block;
+  width: 50vw;
 }
 .text-center{
   text-align: center;
@@ -194,6 +200,8 @@ p.eventDetails{
 .tdaySection{
   background: url('../img/tdayBack.jpg');
   background-size: cover;
+  min-height: 300px;
+  height: 100vh
 }
 .highlightReel{
   width: 90%;
@@ -254,9 +262,10 @@ p.eventDetails{
     // top: -300px;
 
     .col3{
-      width: 25%;
+      width: 20%;
       height: 300px;
-      float: left;
+      position: relative;
+      display: inline-block;
 
       h2{
         margin-top: 50%;
@@ -416,23 +425,21 @@ p.eventDetails{
     top: 20px;
     margin-bottom: 20px;
   }
-  .social{
-    margin-top: 70px;
-
-    i.fa{
-      box-sizing:content-box;
-      padding: 20px;
-      font-size: 16px;
-    }
-  }
 }
 
 .logo_main {
+  margin-top: 10%;
   width: 50vw;
 }
 
 #tweet_list {
   list-style: none;
+
+  .twitter_profile_pic {
+    height: 1.25em;
+    border: 1px solid white;
+    margin-right: 10px;
+  }
 }
 
 .tweet {
@@ -458,4 +465,28 @@ p.eventDetails{
   display: block;
   font-size: 2em;
   color: white;
+}
+
+.social {
+  i.fa{
+    box-sizing:content-box;
+    font-size: 2em;
+    margin: 3em 1em;
+  }
+
+  .fa-facebook:hover {
+    color: #3a5795;
+  }
+
+  .fa-twitter:hover {
+    color: #55acee;
+  }
+
+  .fa-instagram:hover {
+    color: #517fa4;
+  }
+
+  .fa-medium:hover {
+    color: #FFFF66;
+  }
 }

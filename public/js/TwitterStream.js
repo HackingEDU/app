@@ -49,7 +49,7 @@ var TwitterStream = (function() {
 	var buildTweet = function(tweet) {
     return '<li class="tweet" style="display: none;"> \
     	<a href="https://www.twitter.com/'+tweet.user.screen_name+'/status/'+tweet.id_str +'" target="_blank">\
-    	 <span class="screen-name">@'+tweet.user.screen_name+'</span> <span class="content">'+tweet.text+'</span> \
+    	 <img src="'+tweet.user.profile_image_url+'" class="twitter_profile_pic"/><span class="screen-name">@'+tweet.user.screen_name+'</span> <span class="content">'+tweet.text+'</span> \
     	</a> \
   	</li>';
 	};
