@@ -366,8 +366,9 @@ p.eventDetails{
     background: url('../img/sponsors/lahacks.jpeg');
   }
   figure{
-    margin: auto;
-    height: 300px;
+    margin: 0.5em 3em;
+    height: 50vh;
+    width: 50vw;
     background-size: contain !important;
     display: inline-block;
     background-position: center center !important;
@@ -375,27 +376,28 @@ p.eventDetails{
   }
 
   .tier1 figure{
-    width: 99.5%;
-    height: 80px;
+    height: 30vh;
   }
 
   .tier2 figure{
-    width: 33%;
-    height: 120px;
+    width: 13vw;
+    min-width: 12em;
+    height: 30vh;
   }
 
   .tier3 figure{
-    width: 24.5%;
-    height: 100px;
-    height: 45px;
-    margin-bottom: 32px;
+    height: 20vh;
+    width: 10vw;
+    min-width: 10em;
+    margin-bottom: 1em;
   }
 
   .tier4 figure{
-    width: 16.3%;
-    height: 36px;
-      margin-bottom: 16px;
-      margin-top: 16px;
+    height: 15vh;
+    width: 8vw;
+    margin-bottom: 16px;
+    min-width: 10em;
+    margin-top: 16px;
   }
 
 }
@@ -436,12 +438,16 @@ p.eventDetails{
 .tweet {
   font-size: 1.5em;
   line-height: 2em;
+  color: white;
+}
+
+#twitter_feed {
+  background-color: #55acee
 }
 
 .tweet a:hover, .twitter-share-button:hover {
-  color: #55acee;
   transition: none;
-  border-bottom: 3px dotted #55acee;
+  border-bottom: 3px dotted white;
 }
 
 .screen-name {
@@ -451,4 +457,5 @@ p.eventDetails{
 .twitter-share-button {
   display: block;
   font-size: 2em;
+  color: white;
 }
