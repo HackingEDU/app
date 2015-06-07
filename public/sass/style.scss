@@ -428,3 +428,27 @@ p.eventDetails{
 .logo_main {
   width: 50vw;
 }
+
+#tweet_list {
+  list-style: none;
+}
+
+.tweet {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.tweet a:hover, .twitter-share-button:hover {
+  color: #55acee;
+  transition: none;
+  border-bottom: 3px dotted #55acee;
+}
+
+.screen-name {
+  font-weight: bolder;
+}
+
+.twitter-share-button {
+  display: block;
+  font-size: 2em;
+}

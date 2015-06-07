@@ -22,7 +22,7 @@ module.exports = function(stream, io){
     tweetEntry.save(function(err) {
       if (!err) {
         // If everything is cool, socket.io emits the tweet.
-        io.emit('tweet', tweet);
+        io.emit('tweet', data);
       }
     });
 

@@ -55,11 +55,12 @@ io.on('connection', function(socket) {
   socket.on('get_tweets', function(data) {
     twit.get('search/tweets', {q: 'hackingedu OR hackingedusf'}, function(error, tweets, response){
       //add error handling later
+      console.log(tweets);
       var statuses = tweets.statuses;
       if (statuses.length > data.amount) {
         statuses = statuses.slice(0, data.amount);
       }
-      socket.emit('tweet_search', statuses);
+      socket.emit('tweet_search_results', statuses);
     });
   });
 });
